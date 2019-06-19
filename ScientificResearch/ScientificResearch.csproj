@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,14 +45,64 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddControllerFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddControllerFrom.Designer.cs">
+      <DependentUpon>AddControllerFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddOffTimerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOffTimerForm.Designer.cs">
+      <DependentUpon>AddOffTimerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddOnTimerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOnTimerForm.Designer.cs">
+      <DependentUpon>AddOnTimerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper\HelperTool.cs" />
+    <Compile Include="Helper\SerialPortHelper.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ControllerItem.cs" />
+    <Compile Include="Models\ExtensionControllerItem.cs" />
+    <Compile Include="Models\LineModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingControllerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingControllerForm.Designer.cs">
+      <DependentUpon>SettingControllerForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddControllerFrom.resx">
+      <DependentUpon>AddControllerFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOffTimerForm.resx">
+      <DependentUpon>AddOffTimerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOnTimerForm.resx">
+      <DependentUpon>AddOnTimerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -60,7 +111,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SettingControllerForm.resx">
+      <DependentUpon>SettingControllerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -70,6 +125,20 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\addTimePoint.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\powerOff.png" />
+    <None Include="Resources\powerOn.png" />
+    <None Include="Resources\set.png" />
+    <None Include="Resources\set1.png" />
+    <Content Include="Resource\AddController.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Components\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
